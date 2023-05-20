@@ -1,0 +1,21 @@
+.cloud {
+  background-color: #fff;
+  opacity: var(--opacity);
+  border-radius: 40%;
+  position: absolute;
+  box-shadow: 0 0 10px 10px #fff;
+  animation: rotation 600s infinite linear;
+  z-index: 1;
+}
+
+@keyframes rotation {
+  0% {
+    transform: translate(0, 0) rotate(0deg) scale(1);
+  }
+  50% {
+    transform: translate(calc(var(--randomX) * 8px - 400px), calc(var(--randomY) * 8px - 400px)) rotate(180deg) scale(1.1);
+  }
+  100% {
+    transform: translate(calc(var(--randomX) * 16px - 800px), calc(var(--randomY) * 16px - 800px)) rotate(360deg) scale(1);
+  }
+}
