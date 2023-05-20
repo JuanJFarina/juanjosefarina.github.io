@@ -13,6 +13,7 @@ function App() {
     if (theme === 'dark') {
       document.getElementById('sky').style.setProperty('background-color', '#000');
       removeStarsMoonsClouds();
+      clearInterval(shootingStars);
       createMoon();
       createStars();
       const intervalId = setInterval(createShootingStar, 4000);
