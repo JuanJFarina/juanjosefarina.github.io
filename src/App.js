@@ -17,31 +17,32 @@ function createStars() {
 
 function createShootingStar() {
   const shootingStar = document.createElement('div');
-  const randomX = Math.random();
-  const randomY = Math.random();
+  const randomX = Math.round(Math.random() * 10)
+  const randomY = Math.round(Math.random() * 10);
+  console.log(randomX + " and " + randomY);
   shootingStar.style.setProperty('--randomX', randomX);
   shootingStar.style.setProperty('--randomY', randomY);
-  shootingStar.style.width = Math.random() * 10 + 'px'; // Random star size
+  shootingStar.style.width = ((Math.random() * 2) + 1) + 'px'; // Random star size
   shootingStar.style.height = shootingStar.style.width;
-  shootingStar.style.left = Math.random() * 100 + '%'; // Random horizontal position
-  shootingStar.style.top = Math.random() * 100 + '%'; // Random vertical position
+  shootingStar.style.left = (Math.random() * 100) + '%'; // Random horizontal position
+  shootingStar.style.top = (Math.random() * 100) + '%'; // Random vertical position
   document.getElementById('night-sky').appendChild(shootingStar);
   shootingStar.className = 'shooting-star';
   setTimeout(() => {
     shootingStar.remove();
-  }, 900);
+  }, 1000);
 }
 
-setTimeout(createStars, 2000);
+setTimeout(createStars, 500);
 
 setTimeout(() => {
   setInterval(createShootingStar, 4000);
-}, 2000);
+}, 500);
 
 function App() {
   return (
     <div id="night-sky">
-      <h1>Hola Mundo !</h1>
+      <h1 style={{color:'#fff'}}>Hola Mundo !</h1>
     </div>
   );
 }
