@@ -4,18 +4,18 @@
   border-radius: 40%;
   position: absolute;
   box-shadow: 0 0 10px 10px #fff;
-  animation: rotation 600s infinite linear;
+  animation: travel 600s infinite linear;
   z-index: 0;
 }
 
-@keyframes rotation {
+@keyframes travel {
   0% {
-    transform: translate(0, 0) rotate(0deg) scale(1);
+    transform: rotate(var(--rotation)) translate(0, 0) scale(1);
   }
   50% {
-    transform: translate(calc(var(--randomX) * 8px - 400px), calc(var(--randomY) * 8px - 400px)) rotate(180deg) scale(1.1);
+    transform: rotate(var(--rotation)) translate(calc(var(--randomX) * 16px - 800px), calc(var(--randomY) * 16px - 800px)) scale(1.1);
   }
   100% {
-    transform: translate(calc(var(--randomX) * 16px - 800px), calc(var(--randomY) * 16px - 800px)) rotate(360deg) scale(1);
+    transform: rotate(var(--rotation)) translate(calc(var(--randomX) * 32px - 1600px), calc(var(--randomY) * 32px - 1600px)) scale(1);
   }
 }

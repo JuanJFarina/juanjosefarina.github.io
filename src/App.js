@@ -4,25 +4,29 @@ import './NightSky.css';
 import './DaySky.css';
 import { ThemeProvider, useTheme } from './components/ThemeContext';
 import Switch from './components/Switch';
+import Write from './components/Write';
+import FadeIn from './components/FadeIn';
 
 function App() {
-  const [shootingStars, setShootingStars] = useState('');
+  const [shootingStars, setShootingStars] = useState([]);
   const {theme} = useTheme();
 
   useEffect(() => {
     if (theme === 'dark') {
       document.getElementById('sky').style.setProperty('background-color', '#000');
       removeStarsMoonsClouds();
-      clearInterval(shootingStars);
+      shootingStars.forEach(intervalId => clearInterval(intervalId));
+      setShootingStars([]);
       createMoon();
       createStars();
       const intervalId = setInterval(createShootingStar, 4000);
-      setShootingStars(intervalId);
+      setShootingStars(prevArray => [...prevArray, intervalId]);
     }
     else {
-      document.getElementById('sky').style.setProperty('background-color', '#eef');
+      document.getElementById('sky').style.setProperty('background-color', '#aaf');
       removeStarsMoonsClouds();
-      clearInterval(shootingStars);
+      shootingStars.forEach(intervalId => clearInterval(intervalId));
+      setShootingStars([]);
       createClouds();
     }
   }, [theme]);
@@ -58,17 +62,19 @@ function App() {
 
   function createClouds() {
     const daySky = document.getElementById('sky');
-    const numClouds = (10 + (Math.round(Math.random() * 10))); // Number of clouds to create
-    console.log(numClouds);
+    const numClouds = (20 + (Math.round(Math.random() * 10))); // Number of clouds to create
+    const randomX = Math.round(Math.random() * 100);
+    const randomY = Math.round(Math.random() * 100);
     for (let i = 0; i < numClouds; i++) {
       const cloud = document.createElement('div');
-      const opacity = Math.random();
+      const opacity = 0.9 + (Math.random() * 0.1);
       cloud.className = 'cloud';
       cloud.style.setProperty('--opacity', opacity);
-      cloud.style.setProperty('--randomX', Math.round(Math.random() * 100));
-      cloud.style.setProperty('--randomY', Math.round(Math.random() * 100));
-      cloud.style.width = (30 + (Math.random() * 270)) + 'px'; // Random cloud size
-      cloud.style.height = cloud.style.width;
+      cloud.style.setProperty('--rotation', (Math.floor(Math.random() * 360) + 'deg'));
+      cloud.style.setProperty('--randomX', randomX);
+      cloud.style.setProperty('--randomY', randomY);
+      cloud.style.width = (150 + (Math.random() * 100)) + 'px'; // Random cloud size
+      cloud.style.height = (150 + (Math.random() * 100)) + 'px'; // Random cloud size
       cloud.style.left = Math.random() * 100 + '%'; // Random horizontal position
       cloud.style.top = Math.random() * 100 + '%'; // Random vertical position
       daySky.appendChild(cloud);
@@ -131,8 +137,32 @@ function App() {
 
   return (
     <div id="sky">
-      <h1 style={theme === 'dark' ? {color:'#fff'} : {color:'#000'}}>Hola Mundo !</h1>
-      <Switch></Switch>
+      <div id="container" style={theme === 'dark' ? {color:'#fff'} : {color:'#000'}}>
+        <Switch></Switch>
+        <h1>
+          <Write text="Hello ! How are u ? :)" time="3000" delay="0" />
+        </h1>
+        <p>
+          <Write text="Welcome to my portfolio ! It's still a work in progress." time="4000" delay="4000" />
+        </p>
+        <p>
+          <Write text="Everything you see is made by me, Juan José Farina, using these technologies:" time="5000" delay="9000" />
+        </p>
+        <FadeIn fade="1000" delay="15000">
+          <ul>
+            <li>React</li>
+            <li>JavaScript</li>
+            <li>CSS3</li>
+            <li>HTML5</li>
+          </ul>
+        </FadeIn>
+        <p>
+          <Write text="You can change between night and day theme, but it will start according to your local time." time="5000" delay="17000" />
+        </p>
+        <p>
+          <Write text="Also, there are a few fun animations in each one !" time="4000" delay="23000" />
+        </p>
+      </div>
     </div>
   );
 }

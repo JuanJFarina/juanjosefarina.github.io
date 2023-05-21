@@ -1,12 +1,9 @@
-#sky {
-  background-color: #000; /* Set a dark color for the night sky */
-}
-
 .star {
   position: absolute;
   background-color: #fff; /* Set the color for the stars */
   border-radius: 50%;
   animation: twinkle 3s infinite ease-in-out;
+  z-index: 0;
 }
 
 @keyframes twinkle {
@@ -29,6 +26,7 @@
   background-color: #ffe;
   border-radius: 50%;
   animation: shootingStar 1s linear;
+  z-index: 2;
 }
 
 @keyframes shootingStar {
@@ -72,6 +70,7 @@
   border-radius: 50%;
   box-shadow: 0 0 5px 0 #fff;
   animation: rotation 600s infinite linear;
+  z-index: 1;
 }
 
 @keyframes rotation {
