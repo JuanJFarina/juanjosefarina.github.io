@@ -20,6 +20,7 @@ export default function Welcome() {
                 <FadeIn fade="1500" delay="6000">
                     <ul>
                         <li>React</li>
+                        <li>Bootstrap</li>
                         <li>JavaScript</li>
                         <li>CSS3</li>
                         <li>HTML5</li>
