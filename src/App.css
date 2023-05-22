@@ -67,6 +67,17 @@ a:hover {
   z-index: 1100 !important;
 }
 
+@media screen and (max-width: 999px) {
+  .silly {
+    font-size: 8px !important;
+  }
+  nav ul li {
+    font-size: 10px;
+    margin-top: 10px;
+    margin-right: 0px;
+  }
+}
+
 @media screen and (max-width: 600px) {
   .sun {
     transform: translate(-25%, 0) !important;
@@ -107,5 +118,10 @@ a:hover {
   .burger-menu.open .menu-items {
     display: block;
     z-index: 1300 !important;
+  }
+
+  .switch {
+    top: 0%;
+    left: 75%;
   }
 }
