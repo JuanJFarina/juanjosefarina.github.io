@@ -8,7 +8,43 @@
   text-align: center;
 }
 
-#container > * {
+#contenedor > * {
   position: relative;
   z-index: 1000 !important;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  margin-top: 10px;
+}
+
+nav ul li {
+  margin-right: 20px;
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: none;
+  padding-left: 6px;
+  padding-right: 6px;
+}
+
+nav ul li:last-child {
+  margin-right: 0;
+}
+
+nav ul li:hover {
+  padding-left: 4px;
+  padding-right: 4px;
+  border: 2px solid #848;
+  border-radius: 5px;
+  cursor: pointer;
 }

@@ -3,9 +3,9 @@ import { useState, useEffect } from 'react';
 import './NightSky.css';
 import './DaySky.css';
 import { ThemeProvider, useTheme } from './components/ThemeContext';
-import Switch from './components/Switch';
-import Write from './components/Write';
-import FadeIn from './components/FadeIn';
+import Welcome from './pages/Welcome';
+import Header from './components/Header';
+import Footer from './components/Footer';
 
 function App() {
   const [shootingStars, setShootingStars] = useState([]);
@@ -27,6 +27,7 @@ function App() {
       removeStarsMoonsClouds();
       shootingStars.forEach(intervalId => clearInterval(intervalId));
       setShootingStars([]);
+      createSun();
       createClouds();
     }
   }, [theme]);
@@ -82,10 +83,69 @@ function App() {
       case 5:
         position = 99;
         break;
+      default:
     }
     moon.style.left = position + '%'; // Random horizontal position
     moon.style.top = '5%';//Vertical position
     nightSky.appendChild(moon);
+  }
+
+  function createSun() {
+    const daySky = document.getElementById('sky');
+    const sun = document.createElement('div');
+    sun.className = 'sun';
+    const time = (new Date()).getHours();
+    let position = 0;
+    switch(time) {
+      case 7:
+      case 19:
+        position = 9;
+        break;
+      case 8:
+      case 20:
+        position = 18;
+        break;
+      case 9:
+      case 21:
+        position = 27;
+        break;
+      case 10:
+      case 22:
+        position = 36;
+        break;
+      case 11:
+      case 23:
+        position = 45;
+        break;
+      case 12:
+      case 0:
+        position = 54;
+        break;
+      case 13:
+      case 1:
+        position = 63;
+        break;
+      case 14:
+      case 2:
+        position = 72;
+        break;
+      case 15:
+      case 3:
+        position = 81;
+        break;
+      case 16:
+      case 4:
+        position = 90;
+        break;
+      case 17:
+      case 5:
+        position = 99;
+        break;
+      default:
+    }
+    sun.style.left = (position - 10) + '%'; // Horizontal position
+    sun.style.top = '-25%';// Vertical position
+    daySky.appendChild(sun);
   }
 
   function createStars() {
@@ -109,14 +169,14 @@ function App() {
     const randomY = Math.round(Math.random() * 100);
     for (let i = 0; i < numClouds; i++) {
       const cloud = document.createElement('div');
-      const opacity = 0.9 + (Math.random() * 0.1);
+      const opacity = 0.8 + (Math.random() * 0.2);
       cloud.className = 'cloud';
       cloud.style.setProperty('--opacity', opacity);
       cloud.style.setProperty('--rotation', (Math.floor(Math.random() * 360) + 'deg'));
       cloud.style.setProperty('--randomX', randomX);
       cloud.style.setProperty('--randomY', randomY);
-      cloud.style.width = (150 + (Math.random() * 100)) + 'px'; // Random cloud size
-      cloud.style.height = (150 + (Math.random() * 100)) + 'px'; // Random cloud size
+      cloud.style.width = (150 + (Math.random() * 150)) + 'px'; // Random cloud size
+      cloud.style.height = (150 + (Math.random() * 150)) + 'px'; // Random cloud size
       cloud.style.left = Math.random() * 100 + '%'; // Random horizontal position
       cloud.style.top = Math.random() * 100 + '%'; // Random vertical position
       daySky.appendChild(cloud);
@@ -161,11 +221,13 @@ function App() {
     const stars = document.getElementsByClassName('star');
     const moon = document.getElementsByClassName('moon');
     const clouds = document.getElementsByClassName('cloud');
+    const suns = document.getElementsByClassName('sun');
 
     // Convert the HTMLCollection to an array
     const starsArray = Array.from(stars);
     const moonArray = Array.from(moon);
     const cloudsArray = Array.from(clouds);
+    const sunsArray = Array.from(suns);
 
     // Remove each star element
     starsArray.forEach((star) => star.remove());
@@ -175,35 +237,29 @@ function App() {
 
     // Remove each cloud element
     cloudsArray.forEach((cloud) => cloud.remove());
+
+    // Remove each sun element
+    sunsArray.forEach((sun) => sun.remove());
   }
 
   return (
     <div id="sky">
-      <div id="container" style={theme === 'dark' ? {color:'#fff'} : {color:'#000'}}>
-        <Switch></Switch>
-        <h1>
-          <Write text="Hello ! How are u ? :)" time="2000" delay="0" />
-        </h1>
-        <p>
-          <Write text="Welcome to my portfolio ! It's still a work in progress." time="2000" delay="3000" />
-        </p>
-        <p>
-          <Write text="Everything you see is made by me, Juan José Farina, using these technologies:" time="2000" delay="6000" />
-        </p>
-        <FadeIn fade="1000" delay="9000">
-          <ul>
-            <li>React</li>
-            <li>JavaScript</li>
-            <li>CSS3</li>
-            <li>HTML5</li>
-          </ul>
-        </FadeIn>
-        <p>
-          <Write text="You can change between night and day theme, but it will start according to your local time." time="2000" delay="11000" />
-        </p>
-        <p>
-          <Write text="Also, there are a few fun animations in each one !" time="2000" delay="14000" />
-        </p>
+      <div id="contenedor" className="container-fluid" style={theme === 'dark' ? {color:'#fff'} : {color:'#000'}}>
+        <div className="row">
+          <div className="col-12">
+            <Header />
+          </div>
+        </div>
+        <div className="row flex-grow-1">
+          <div className="col-12">
+            <Welcome />
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-12">
+            <Footer />
+          </div>
+        </div>
       </div>
     </div>
   );

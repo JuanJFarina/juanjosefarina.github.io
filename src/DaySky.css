@@ -3,7 +3,7 @@
   opacity: var(--opacity);
   border-radius: 40%;
   position: absolute;
-  box-shadow: 0 0 10px 10px #fff;
+  box-shadow: 0 0 20px 20px #fff;
   animation: travel 600s infinite linear;
   z-index: 0;
 }
@@ -17,5 +17,29 @@
   }
   100% {
     transform: rotate(var(--rotation)) translate(calc(var(--randomX) * 32px - 1600px), calc(var(--randomY) * 32px - 1600px)) scale(1);
+  }
+}
+
+.sun {
+  position: absolute;
+  background-color: #ff8;
+  background-image: radial-gradient(circle at 30% 30%, #ff4 10%, #ff0 60%);
+  border-radius: 50%;
+  box-shadow: 0 0 20px 20px #ff0;
+  width: 300px;
+  height: 200px;
+  animation: rotation 600s infinite linear;
+  z-index: 0;
+}
+
+@keyframes rotation {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  50% {
+    transform: translate(100px, 0) rotate(180deg);
+  }
+  100% {
+    transform: translate(200px, 0) rotate(360deg);
   }
 }
