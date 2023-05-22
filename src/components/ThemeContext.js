@@ -5,7 +5,7 @@ const ThemeContext = createContext(undefined);
 export const ThemeProvider = ({ children }) => {
     const [theme, setTheme] = useState(() => {
         const time = (new Date()).getHours();
-        if(time >= 7 && time <= 19) {
+        if(time >= 6 && time <= 17) {
             return 'light';
         }
         else {

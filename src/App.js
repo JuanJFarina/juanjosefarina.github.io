@@ -34,15 +34,57 @@ function App() {
   function createMoon() {
     const nightSky = document.getElementById('sky');
     const moon = document.createElement('div');
-    const randomX = Math.round(Math.random() * 100);
-    const randomY = Math.round(Math.random() * 100);
-    moon.style.setProperty('--randomX', randomX);
-    moon.style.setProperty('--randomY', randomY);
     moon.className = 'moon';
-    moon.style.width = (20 + (Math.random() * 20)) + 'px'; // Random star size
-    moon.style.height = moon.style.width;
-    moon.style.left = randomX + '%'; // Random horizontal position
-    moon.style.top = randomY + '%'; // Random vertical position
+    const time = (new Date()).getHours();
+    let position = 0;
+    switch(time) {
+      case 7:
+      case 19:
+        position = 9;
+        break;
+      case 8:
+      case 20:
+        position = 18;
+        break;
+      case 9:
+      case 21:
+        position = 27;
+        break;
+      case 10:
+      case 22:
+        position = 36;
+        break;
+      case 11:
+      case 23:
+        position = 45;
+        break;
+      case 12:
+      case 0:
+        position = 54;
+        break;
+      case 13:
+      case 1:
+        position = 63;
+        break;
+      case 14:
+      case 2:
+        position = 72;
+        break;
+      case 15:
+      case 3:
+        position = 81;
+        break;
+      case 16:
+      case 4:
+        position = 90;
+        break;
+      case 17:
+      case 5:
+        position = 99;
+        break;
+    }
+    moon.style.left = position + '%'; // Random horizontal position
+    moon.style.top = '5%';//Vertical position
     nightSky.appendChild(moon);
   }
 
@@ -140,15 +182,15 @@ function App() {
       <div id="container" style={theme === 'dark' ? {color:'#fff'} : {color:'#000'}}>
         <Switch></Switch>
         <h1>
-          <Write text="Hello ! How are u ? :)" time="3000" delay="0" />
+          <Write text="Hello ! How are u ? :)" time="2000" delay="0" />
         </h1>
         <p>
-          <Write text="Welcome to my portfolio ! It's still a work in progress." time="4000" delay="4000" />
+          <Write text="Welcome to my portfolio ! It's still a work in progress." time="2000" delay="3000" />
         </p>
         <p>
-          <Write text="Everything you see is made by me, Juan José Farina, using these technologies:" time="5000" delay="9000" />
+          <Write text="Everything you see is made by me, Juan José Farina, using these technologies:" time="2000" delay="6000" />
         </p>
-        <FadeIn fade="1000" delay="15000">
+        <FadeIn fade="1000" delay="9000">
           <ul>
             <li>React</li>
             <li>JavaScript</li>
@@ -157,10 +199,10 @@ function App() {
           </ul>
         </FadeIn>
         <p>
-          <Write text="You can change between night and day theme, but it will start according to your local time." time="5000" delay="17000" />
+          <Write text="You can change between night and day theme, but it will start according to your local time." time="2000" delay="11000" />
         </p>
         <p>
-          <Write text="Also, there are a few fun animations in each one !" time="4000" delay="23000" />
+          <Write text="Also, there are a few fun animations in each one !" time="2000" delay="14000" />
         </p>
       </div>
     </div>

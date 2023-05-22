@@ -69,6 +69,8 @@
   background-image: radial-gradient(circle at 30% 30%, #fff 10%, #888 60%);
   border-radius: 50%;
   box-shadow: 0 0 5px 0 #fff;
+  width: 40px;
+  height: 40px;
   animation: rotation 600s infinite linear;
   z-index: 1;
 }
@@ -79,11 +81,11 @@
     opacity: 1;
   }
   50% {
-    transform: translate(calc(var(--randomX) * 8px - 400px), calc(var(--randomY) * 8px - 400px)) rotate(180deg) scale(1.1);
+    transform: translate(100px, 0) rotate(180deg) scale(1.1);
     opacity: 0.8;
   }
   100% {
-    transform: translate(calc(var(--randomX) * 16px - 800px), calc(var(--randomY) * 16px - 800px)) rotate(360deg) scale(1);
+    transform: translate(200px, 0) rotate(360deg) scale(1);
     opacity: 1;
   }
 }
