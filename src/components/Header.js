@@ -23,7 +23,7 @@ export default function Header() {
                 Still here? You must really like me! Why don't you hire me already? ;)
               </p>
             </FadeIn>
-            <FadeIn fade="1000" delay="12000">
+            <FadeIn fade="1000" delay="1500">
               <div className="menu-icon d-sm-none" onClick={toggleMenu}>
                 &#9776;
               </div>

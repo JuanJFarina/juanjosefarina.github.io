@@ -1,5 +1,5 @@
 import './App.css';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, createElement } from 'react';
 import * as Logic from './ThemeAnimations';
 import './NightSky.css';
 import './DaySky.css';
@@ -61,6 +61,37 @@ function App() {
     // Remove each sun element
     sunsArray.forEach((sun) => sun.remove());
   }
+
+  function createEasterEgg() {
+    const container = document.createElement('div');
+    container.className = 'star-wars';
+    const paragraph = document.createElement('p');
+    paragraph.className = 'crawl';
+    const textLines = [
+      'A NEW HOPE',
+      '',
+      'It is a period of poverty.',
+      'Argentinian people is having',
+      'the worst crisis in their',
+      'history.',
+      '',
+      'You can make a change',
+      'by hiring me,',
+      'a young talented developer',
+      'and defeat the evil empire.'
+    ];
+    textLines.forEach((line) => {
+      const lineElement = document.createElement('span');
+      lineElement.textContent = line;
+      paragraph.appendChild(lineElement);
+      const lineBreak = document.createElement('br');
+      paragraph.appendChild(lineBreak);
+    });
+    container.appendChild(paragraph);
+    document.getElementById('sky').appendChild(container);
+  }
+
+  setTimeout(createEasterEgg, 2000);
 
   return (
     <div>

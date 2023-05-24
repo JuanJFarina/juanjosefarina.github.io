@@ -9,15 +9,10 @@ export default function Welcome() {
             <div className="col-sm-2 d-none d-sm-block"></div>
             <div className="col-12 col-sm-8">
                 <h1>
-                <Write text="Hello ! How are u ? :)" time="1500" delay="0" />
+                    <Write text="Welcome to my portfolio !" time="1000" delay="0" />
                 </h1>
-                <p>
-                <Write text="Welcome to my portfolio ! It's still a work in progress." time="1500" delay="2000" />
-                </p>
-                <p>
-                <Write text="Everything you see is made by me, Juan José Farina, using these technologies:" time="1500" delay="4000" />
-                </p>
-                <FadeIn fade="1500" delay="6000">
+                <FadeIn fade="1000" delay="0">
+                    <p>Everything you see is made by me, Juan José Farina, using these technologies:</p>
                     <ul>
                         <li>React</li>
                         <li>Bootstrap</li>
@@ -25,13 +20,9 @@ export default function Welcome() {
                         <li>CSS3</li>
                         <li>HTML5</li>
                     </ul>
+                    <p>You can change between night and day theme, but it will start according to your local time.</p>
+                    <p>Also, there are a few fun animations in each one !</p>
                 </FadeIn>
-                <p>
-                <Write text="You can change between night and day theme, but it will start according to your local time." time="1500" delay="8000" />
-                </p>
-                <p>
-                <Write text="Also, there are a few fun animations in each one !" time="1500" delay="10000" />
-                </p>
             </div>
             <div className="col-sm-2 d-none d-sm-block"></div>
         </div>
