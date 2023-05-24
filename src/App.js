@@ -28,9 +28,6 @@ function App() {
       Logic.createStars();
       const intervalId = setInterval(Logic.createShootingStar, 4000);
       setShootingStars(prevArray => [...prevArray, intervalId]);
-      if(easterEgg === false) {
-        setTimeout(checkEasterEgg, 300000);
-      }
     }
     else {
       document.getElementById('sky').style.setProperty('background-color', '#aaf');
@@ -42,11 +39,13 @@ function App() {
     }
   }, [theme]);
 
-  function checkEasterEgg() {
-    if(theme === 'dark') {
-      createEasterEgg();
-    }
+  useEffect(createEasterEgg, [easterEgg]);
+
+  function launchEasterEgg() {
+    setEasterEgg(true);
   }
+
+  setTimeout(launchEasterEgg, 120000);
 
   function removeStarsMoonsClouds() {
     const stars = document.getElementsByClassName('star');
@@ -74,7 +73,7 @@ function App() {
   }
 
   function createEasterEgg() {
-    if(easterEgg === false && theme === 'dark') {
+    if(easterEgg === true && theme === 'dark') {
       const container = document.createElement('div');
       container.className = 'star-wars';
       const paragraph = document.createElement('p');
@@ -102,7 +101,6 @@ function App() {
       container.appendChild(paragraph);
       document.getElementById('sky').appendChild(container);
     }
-    setEasterEgg(true);
   }
 
   return (

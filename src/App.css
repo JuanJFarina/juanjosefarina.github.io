@@ -69,6 +69,15 @@ a {
   left: 100%;
 }
 
+.projectImage {
+  filter: blur(1px);
+  transition: filter 0.1s ease-in-out;
+}
+
+.projectImage:hover {
+  filter: blur(0px);
+}
+
 @media screen and (max-width: 999px) {
   .silly {
     font-size: 8px !important;

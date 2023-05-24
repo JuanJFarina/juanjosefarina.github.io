@@ -9,14 +9,13 @@ export default function Welcome() {
             <div className="col-sm-2 d-none d-sm-block"></div>
             <div className="col-12 col-sm-8">
                 <h1>
-                    <Write text="Welcome to my portfolio !" time="1000" delay="0" />
+                    <Write text="Juan José Farina" time="1000" delay="0" />
                 </h1>
                 <FadeIn fade="1000" delay="0">
                     <br />
-                    <h2 className="name">Juan José Farina</h2>
-                    <h4 className="title">Full-Stack Developer / Software Engineer</h4>
+                    <h2 className="title">Full-Stack Developer / Software Engineer</h2>
                     <br />
-                    <p>Everything you see is made by me using these technologies:</p>
+                    <p>Welcome to my portfolio ! Everything is made using these technologies:</p>
                     <ul>
                         <li>React</li>
                         <li>Bootstrap</li>
@@ -24,8 +23,8 @@ export default function Welcome() {
                         <li>CSS3</li>
                         <li>HTML5</li>
                     </ul>
-                    <p>You can change between night and day theme, but it will start according to your local time.</p>
-                    <p>Also, there are a few fun animations in each one !</p>
+                    <p>Your actual theme is because of your local time but you can change it using the upper right switch.</p>
+                    <p>There are many animations and hidden easter eggs, so have fun looking for them !</p>
                 </FadeIn>
             </div>
             <div className="col-sm-2 d-none d-sm-block"></div>
