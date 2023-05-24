@@ -29,7 +29,7 @@ export default function Header() {
               </div>
               <ul className="menu-items">
                 <li><Link to="/portfolio" style={theme === 'light' ? { color: '#000' } : { color: '#fff' }}>Welcome</Link></li>
-                <li><Link to="/projects" style={theme === 'light' ? { color: '#000' } : { color: '#fff' }}>My projects</Link></li>
+                <li><Link to="/projects" style={theme === 'light' ? { color: '#000' } : { color: '#fff' }}>Projects</Link></li>
                 <li><Link to="/about" style={theme === 'light' ? { color: '#000' } : { color: '#fff' }}>About me</Link></li>
                 <li><Link to="/contact" style={theme === 'light' ? { color: '#000' } : { color: '#fff' }}>Contact</Link></li>
               </ul>

@@ -12,7 +12,11 @@ export default function Welcome() {
                     <Write text="Welcome to my portfolio !" time="1000" delay="0" />
                 </h1>
                 <FadeIn fade="1000" delay="0">
-                    <p>Everything you see is made by me, Juan José Farina, using these technologies:</p>
+                    <br />
+                    <h2 className="name">Juan José Farina</h2>
+                    <h4 className="title">Full-Stack Developer / Software Engineer</h4>
+                    <br />
+                    <p>Everything you see is made by me using these technologies:</p>
                     <ul>
                         <li>React</li>
                         <li>Bootstrap</li>

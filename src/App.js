@@ -1,8 +1,9 @@
 import './App.css';
-import { useState, useEffect, createElement } from 'react';
+import { useState, useEffect } from 'react';
 import * as Logic from './ThemeAnimations';
 import './NightSky.css';
 import './DaySky.css';
+import './StarWarsEffect.css';
 import { ThemeProvider, useTheme } from './components/ThemeContext';
 import Welcome from './pages/Welcome';
 import Projects from './pages/Projects';
@@ -14,6 +15,7 @@ import { Route, Routes, BrowserRouter } from 'react-router-dom';
 
 function App() {
   const [shootingStars, setShootingStars] = useState([]);
+  const [easterEgg, setEasterEgg] = useState(false);
   const {theme} = useTheme();
 
   useEffect(() => {
@@ -26,6 +28,9 @@ function App() {
       Logic.createStars();
       const intervalId = setInterval(Logic.createShootingStar, 4000);
       setShootingStars(prevArray => [...prevArray, intervalId]);
+      if(easterEgg === false) {
+        setTimeout(checkEasterEgg, 300000);
+      }
     }
     else {
       document.getElementById('sky').style.setProperty('background-color', '#aaf');
@@ -36,6 +41,12 @@ function App() {
       Logic.createClouds();
     }
   }, [theme]);
+
+  function checkEasterEgg() {
+    if(theme === 'dark') {
+      createEasterEgg();
+    }
+  }
 
   function removeStarsMoonsClouds() {
     const stars = document.getElementsByClassName('star');
@@ -63,35 +74,36 @@ function App() {
   }
 
   function createEasterEgg() {
-    const container = document.createElement('div');
-    container.className = 'star-wars';
-    const paragraph = document.createElement('p');
-    paragraph.className = 'crawl';
-    const textLines = [
-      'A NEW HOPE',
-      '',
-      'It is a period of poverty.',
-      'Argentinian people is having',
-      'the worst crisis in their',
-      'history.',
-      '',
-      'You can make a change',
-      'by hiring me,',
-      'a young talented developer',
-      'and defeat the evil empire.'
-    ];
-    textLines.forEach((line) => {
-      const lineElement = document.createElement('span');
-      lineElement.textContent = line;
-      paragraph.appendChild(lineElement);
-      const lineBreak = document.createElement('br');
-      paragraph.appendChild(lineBreak);
-    });
-    container.appendChild(paragraph);
-    document.getElementById('sky').appendChild(container);
+    if(easterEgg === false && theme === 'dark') {
+      const container = document.createElement('div');
+      container.className = 'star-wars';
+      const paragraph = document.createElement('p');
+      paragraph.className = 'crawl';
+      const textLines = [
+        'A NEW HOPE',
+        '',
+        'It is a period of poverty.',
+        'Argentinian people is having',
+        'the worst crisis in their',
+        'history.',
+        '',
+        'You can make a change',
+        'by hiring me,',
+        'a young talented developer',
+        'and defeat the evil empire.'
+      ];
+      textLines.forEach((line) => {
+        const lineElement = document.createElement('span');
+        lineElement.textContent = line;
+        paragraph.appendChild(lineElement);
+        const lineBreak = document.createElement('br');
+        paragraph.appendChild(lineBreak);
+      });
+      container.appendChild(paragraph);
+      document.getElementById('sky').appendChild(container);
+    }
+    setEasterEgg(true);
   }
-
-  setTimeout(createEasterEgg, 2000);
 
   return (
     <div>
@@ -102,7 +114,7 @@ function App() {
           </div>
         </div>
         <div className="row flex-grow-1">
-          <div className="col-12">
+          <div className="col-12 floating" style={theme === 'dark' ? {textShadow:'1.5px 1.5px 1px #444'} : {textShadow:'1.5px 1.5px 1px #ccc'}}>
                 <Routes>
                   <Route path="/portfolio" element={<Welcome />} />
                   <Route path="/projects" element={<Projects />} />

@@ -11,6 +11,7 @@ export default function About() {
                     <h1>
                         <Write text="About me" time="1000" delay="0" />
                     </h1>
+                    <br />
                     <FadeIn fade="1000" delay="0">
                         <p>I'm 32 years old, I'm from Argentina (currently there, in Rosario city), and I'm looking for a career change; my life has always gone from intellectual activities like problem-solving, puzzles, videogames, maths, computers and loving to study and learn, to loving high performance in physical activities, like sports, gymnastics and dancing.</p>
                         <p>I'm a developer since 2010 (Bachelor in 'Analista de Sistemas de Computación'), but I don't have formal experience because I changed to dance as a profession in 2013. Nevertheless, I think that profession taught me lots about perseverance, discipline, creativity, collaboration, hard-work and commitment.</p>
