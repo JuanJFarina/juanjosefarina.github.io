@@ -114,7 +114,7 @@ function App() {
           </div>
         </div>
         <div className="row flex-grow-1">
-          <div className="col-12 floating" style={theme === 'dark' ? {textShadow:'1.5px 1.5px 1px #444'} : {textShadow:'1.5px 1.5px 1px #ccc'}}>
+          <div className="col-12" style={theme === 'dark' ? {textShadow:'1.5px 1.5px 1px #444'} : {textShadow:'1.5px 1.5px 1px #ccc'}}>
                 <Routes>
                   <Route path="/portfolio" element={<Welcome />} />
                   <Route path="/projects" element={<Projects />} />

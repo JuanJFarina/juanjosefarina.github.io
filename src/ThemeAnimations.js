@@ -141,10 +141,10 @@ export function createClouds() {
       cloud.style.setProperty('--rotation', (Math.floor(Math.random() * 360) + 'deg'));
       cloud.style.setProperty('--randomX', randomX);
       cloud.style.setProperty('--randomY', randomY);
-      cloud.style.width = (150 + (Math.random() * 150)) + 'px'; // Random cloud size
-      cloud.style.height = (150 + (Math.random() * 150)) + 'px'; // Random cloud size
-      cloud.style.left = Math.random() * 100 + '%'; // Random horizontal position
-      cloud.style.top = Math.random() * 100 + '%'; // Random vertical position
+      cloud.style.width = (100 + (Math.random() * 100)) + 'px'; // Random cloud size
+      cloud.style.height = (100 + (Math.random() * 100)) + 'px'; // Random cloud size
+      cloud.style.left = (5 + (Math.random() * 80)) + '%'; // Random horizontal position
+      cloud.style.top = (5 + (Math.random() * 60)) + '%'; // Random vertical position
       daySky.appendChild(cloud);
     }
   }

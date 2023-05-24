@@ -69,37 +69,6 @@ a {
   left: 100%;
 }
 
-@keyframes float {
-  0% {
-    transform: translateY(0) translateX(0);
-  }
-  13% {
-    transform: translateY(2px) translateX(2px);
-  }
-  26% {
-    transform: translateY(0px) translateX(4px);
-  }
-  39% {
-    transform: translateY(-2px) translateX(2px);
-  }
-  52% {
-    transform: translateY(0) translateX(0);
-  }
-  65% {
-    transform: translateY(2px) translateX(-2px);
-  }
-  78% {
-    transform: translateY(0) translateX(-4px);
-  }
-  91% {
-    transform: translateY(-2px) translateX(-2px);
-  }
-}
-
-.floating {
-  animation: float 10s linear infinite; /* Adjust the duration as needed */
-}
-
 @media screen and (max-width: 999px) {
   .silly {
     font-size: 8px !important;
