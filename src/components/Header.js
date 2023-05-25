@@ -18,7 +18,7 @@ export default function Header() {
         <div className="col-sm-1 d-none d-sm-block"></div>
         <div className="col-12 col-sm-10">
           <nav className={`burger-menu ${isMenuOpen ? 'open' : ''}`}>
-            <FadeIn fade="1000" delay="60000">
+            <FadeIn fade="1000" delay="120000">
               <p className="silly" style={{ fontSize: '10px', marginTop: '10px', marginRight: '30px', color: '#848', fontWeight: '900' }}>
                 Still here? You must really like me! Why don't you hire me already? ;)
               </p>

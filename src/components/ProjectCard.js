@@ -21,20 +21,25 @@ export default function ProjectCard(props) {
     }
 
     const handleClick = () => {
+        clearInterval(arbInterval);
+        imgRef.current.src = props.images[0];
         window.open(props.url, '_blank');
     }
 
   return (
-    <div className="projectCard">
+    <div
+      className="projectCard"
+      onMouseEnter={handleHover}
+      onMouseLeave={handleLeave}
+      onBlur={handleLeave}
+      onClick={handleClick}
+    >
         <img
             className="projectImage"
+            title="Click me"
             ref={imgRef}
             src={props.image}
             alt={props.text}
-            title={props.text}
-            onMouseEnter={handleHover}
-            onMouseLeave={handleLeave}
-            onClick={handleClick}
         />
         {props.children}
     </div>

@@ -7,7 +7,7 @@ export default function Contact() {
       <main className="container-fluid">
             <div className="row">
                 <div className="col-sm-2 d-none d-sm-block"></div>
-                <div className="col-12 col-sm-8">
+                <div className="col-12 col-sm-8 contact">
                     <h1>
                         <Write text="Contact" time="1000" delay="0" />
                     </h1>

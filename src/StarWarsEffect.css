@@ -16,14 +16,26 @@
   white-space: nowrap;
   transform-origin: 50% 100%;
   animation: crawl 30s linear;
-  z-index: -10 !important;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
 }
 
 @keyframes crawl {
   0% {
-    transform: translateZ(0) rotateX(6deg) translateY(0%);
+    transform: translateZ(0) rotateX(3deg) translateY(0%);
+    opacity:1;
+    display: block;
+  }
+  95% {
+    opacity: 1;
+    display: block;
   }
   100% {
-    transform: translateZ(0) rotateX(8deg) translateY(-8500px);
+    transform: translateZ(0) rotateX(4deg) translateY(-8000px);
+    opacity: 0;
+    display: none;
+  }
+  to {
+    display: none;
   }
 }

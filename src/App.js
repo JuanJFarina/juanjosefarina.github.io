@@ -4,6 +4,7 @@ import * as Logic from './ThemeAnimations';
 import './NightSky.css';
 import './DaySky.css';
 import './StarWarsEffect.css';
+import './TheSimpsonsEffect.css';
 import { ThemeProvider, useTheme } from './components/ThemeContext';
 import Welcome from './pages/Welcome';
 import Projects from './pages/Projects';
@@ -45,7 +46,7 @@ function App() {
     setEasterEgg(true);
   }
 
-  setTimeout(launchEasterEgg, 120000);
+  setTimeout(launchEasterEgg, 60000);
 
   function removeStarsMoonsClouds() {
     const stars = document.getElementsByClassName('star');
@@ -90,6 +91,25 @@ function App() {
         'by hiring me,',
         'a young talented developer',
         'and defeat the evil empire.'
+      ];
+      textLines.forEach((line) => {
+        const lineElement = document.createElement('span');
+        lineElement.textContent = line;
+        paragraph.appendChild(lineElement);
+        const lineBreak = document.createElement('br');
+        paragraph.appendChild(lineBreak);
+      });
+      container.appendChild(paragraph);
+      document.getElementById('sky').appendChild(container);
+    }
+    else if(easterEgg === true && theme === 'light') {
+      const container = document.createElement('div');
+      container.className = 'the-simpsons';
+      const paragraph = document.createElement('p');
+      paragraph.className = 'intro';
+      const textLines = [
+        'HIRE',
+        'ME, PLEASE'
       ];
       textLines.forEach((line) => {
         const lineElement = document.createElement('span');
