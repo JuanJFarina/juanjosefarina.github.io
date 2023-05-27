@@ -8,7 +8,7 @@ import './TheSimpsonsEffect.css';
 import { ThemeProvider, useTheme } from './components/ThemeContext';
 import Welcome from './pages/Welcome';
 import Projects from './pages/Projects';
-import About from './pages/About';
+import Resume from './pages/Resume';
 import Contact from './pages/Contact';
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -136,7 +136,7 @@ function App() {
                 <Routes>
                   <Route path="/portfolio" element={<Welcome />} />
                   <Route path="/projects" element={<Projects />} />
-                  <Route path="/about" element={<About />} />
+                  <Route path="/Resume" element={<Resume />} />
                   <Route path="/contact" element={<Contact />} />
                 </Routes>
           </div>

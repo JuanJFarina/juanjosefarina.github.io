@@ -7,7 +7,7 @@ export default function ProjectCard(props) {
     const handleHover = () => {
         let i = 0;
         setArbInterval(setInterval(function() {
-          imgRef.current.src = props.images[i];
+          if(imgRef.current) {imgRef.current.src = props.images[i];}
           i++;
           if (i === props.images.length) {
             i = 0;
@@ -17,12 +17,12 @@ export default function ProjectCard(props) {
 
     const handleLeave = () => {
         clearInterval(arbInterval);
-        imgRef.current.src = props.images[0];
+        if(imgRef.current) {imgRef.current.src = props.images[0];}
     }
 
     const handleClick = () => {
         clearInterval(arbInterval);
-        imgRef.current.src = props.images[0];
+        if(imgRef.current) {imgRef.current.src = props.images[0];}
         window.open(props.url, '_blank');
     }
 
@@ -32,14 +32,14 @@ export default function ProjectCard(props) {
       onMouseEnter={handleHover}
       onMouseLeave={handleLeave}
       onBlur={handleLeave}
-      onClick={handleClick}
     >
         <img
             className="projectImage"
-            title="Click me"
+            title="Click to go"
             ref={imgRef}
             src={props.images[0]}
             alt={props.text}
+            onClick={handleClick}
         />
         {props.children}
     </div>

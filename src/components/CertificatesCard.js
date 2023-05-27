@@ -15,9 +15,9 @@ export default function CertificatesCard(props) {
         } else {
           setCurrentIndex(0);
         }
-        if(image.current) {
-            setTimeout(() => {image.current.style.opacity = '1';}, 300);
-        }
+        setTimeout(() => {
+            if(image.current) {image.current.style.opacity = '1';}
+        }, 300);
       }, 2000)
     );
   };
@@ -26,9 +26,7 @@ export default function CertificatesCard(props) {
     if(doTransition) {
         transition();
         setFadeOutId(setTimeout(() => {
-            if(image.current) {
-                image.current.style.opacity = '0';
-            }
+            if(image.current) {image.current.style.opacity = '0';}
         }, 1700));
         return () => {
         clearTimeout(timeoutId);

@@ -12,11 +12,11 @@ h1 {
   font-weight: 900;
   letter-spacing: 5px;
 }
-h2 {font-weight: 700;}
-h3 {font-weight: 600;}
-h4 {font-weight: 500;}
-h5 {font-weight: 400;}
-h6 {font-weight: 300;}
+h2 {font-weight: 700;letter-spacing:4px;}
+h3 {font-weight: 600;letter-spacing:3px;}
+h4 {font-weight: 500;letter-spacing:2px;}
+h5 {font-weight: 400;letter-spacing:1px;}
+h6 {font-weight: 300;letter-spacing:0px;}
 
 #contenedor {
   position: relative;
@@ -78,6 +78,14 @@ a {
   position: absolute;
   top: 0;
   left: 100%;
+}
+
+article {
+  border-radius: 10px 10px 10px 10px;
+  background-color: rgba(128, 128, 128, 0.5);
+  backdrop-filter: blur(4px);
+  padding: 10px;
+  font-style: italic;
 }
 
 .projectCard {
@@ -309,8 +317,24 @@ a {
     left: 75%;
   }
 
+  .projectCard {
+    filter: blur(0);
+    opacity: 1;
+    min-height: 250px;
+  }
+
   .certificateImage:hover {
     transform: scale(1.5);
+  }
+
+  .recomCard h6 {
+    font-size: 14px;
+    margin-bottom: 0px;
+  }
+
+  .recomCard p {
+    padding: 0px;
+    font-size: 12px;
   }
 
 }
