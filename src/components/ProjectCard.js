@@ -38,7 +38,7 @@ export default function ProjectCard(props) {
             className="projectImage"
             title="Click me"
             ref={imgRef}
-            src={props.image}
+            src={props.images[0]}
             alt={props.text}
         />
         {props.children}
