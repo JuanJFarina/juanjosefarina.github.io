@@ -46,7 +46,7 @@ function App() {
     setEasterEgg(true);
   }
 
-  setTimeout(launchEasterEgg, 60000);
+  setTimeout(launchEasterEgg, 6000);
 
   function removeStarsMoonsClouds() {
     const stars = document.getElementsByClassName('star');
@@ -125,7 +125,7 @@ function App() {
 
   return (
     <div>
-      <div id="contenedor" className="container-fluid" style={theme === 'dark' ? {color:'#fff'} : {color:'#000'}}>
+      <div id="sky" className="container-fluid contenedor" style={theme === 'dark' ? {color:'#fff'} : {color:'#000'}}>
         <div className="row">
           <div className="col-12">
             <Header />

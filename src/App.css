@@ -2,8 +2,9 @@
   margin: 0;
   padding: 0;
   width: 100vw;
+  min-height: 100vh;
   text-align: center;
-  overflow-x: hidden;
+  overflow: hidden;
   font-family: 'League Spartan', sans-serif;
   font-weight: 100;
 }
@@ -18,9 +19,13 @@ h4 {font-weight: 500;letter-spacing:2px;}
 h5 {font-weight: 400;letter-spacing:1px;}
 h6 {font-weight: 300;letter-spacing:0px;}
 
-#contenedor {
+.contenedor {
   position: relative;
-  z-index: 10;
+}
+
+main {
+  position: relative;
+  z-index: 90;
 }
 
 nav {
@@ -86,6 +91,11 @@ article {
   backdrop-filter: blur(4px);
   padding: 10px;
   font-style: italic;
+  transition: box-shadow 0.2s linear;
+}
+
+article:hover {
+  box-shadow: 0 0 2px 2px #888;
 }
 
 .projectCard {
@@ -117,6 +127,12 @@ article {
   border-radius: 10px 10px 0px 0px;
 }
 
+.resumeLink {
+  font-style: italic;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
 .certificateCard {
   margin: 10px;
   height: 200px;
@@ -142,6 +158,11 @@ article {
   min-height: 300px;
   max-height: 400px;
   text-align: left;
+  transition: box-shadow 0.2s linear;
+}
+
+.recomCard:hover {
+  box-shadow: 0 0 2px 2px #888;
 }
 
 .recomCard p {
@@ -151,10 +172,15 @@ article {
   text-align: center;
 }
 
-.contact {
+section {
   border-radius: 10px 10px 10px 10px;
   background-color: rgba(128, 128, 128, 0.5);
   backdrop-filter: blur(4px);
+  padding: 10px;
+}
+
+section input, section textarea, section button {
+  margin: 10px;
 }
 
 @keyframes nightLights {
@@ -319,7 +345,7 @@ article {
 
   .projectCard {
     filter: blur(0);
-    opacity: 1;
+    opacity: 0.7;
     min-height: 250px;
   }
 
@@ -335,6 +361,10 @@ article {
   .recomCard p {
     padding: 0px;
     font-size: 12px;
+  }
+
+  section input, section textarea {
+    width: 100%;
   }
 
 }

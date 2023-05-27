@@ -3,11 +3,13 @@ import Write from '../components/Write';
 import FadeIn from '../components/FadeIn';
 import { useTheme } from '../components/ThemeContext';
 import RecomCard from '../components/RecomCard';
+import C0 from '../assets/C0.jpg';
 import C1 from '../assets/C1.png';
 import C2 from '../assets/C2.png';
 import C3 from '../assets/C3.jpg';
 import C4 from '../assets/C4.jpg';
 import C5 from '../assets/C5.jpg';
+import C5C from '../assets/C5C.jpg';
 import C6 from '../assets/C6.jpg';
 import C7 from '../assets/C7.jpg';
 import C8 from '../assets/C8.jpg';
@@ -22,7 +24,12 @@ import CertificatesCard from '../components/CertificatesCard';
 
 export default function Resume() {
     const {theme} = useTheme();
-    const certifImages = [C1, C2, C3, C4, C5, C6, C7, C8, C9, C10, C11, C12, C13, C14, C15];
+    const certifImages = [C0, C1, C2, C3, C4, C5, C5C, C6, C7, C8, C9, C10, C11, C12, C13, C14, C15];
+
+    const resumeLink = () => {
+        window.open('https://docs.google.com/document/d/15zYYc_d1gcCBmfVd-C04rti5hQeozUA5MVOWW5wIuFg/edit?usp=sharing', '_blank');
+    }
+
     return (
         <main className="container-fluid">
         <div className="row">
@@ -33,6 +40,32 @@ export default function Resume() {
                 </h1>
                 <br />
                 <FadeIn fade="1000" delay="0">
+                    <p>You can see my full resume clicking <span className="resumeLink" onClick={resumeLink}>here</span> (this will open another tab)</p>
+                    <br />
+                    <h2>
+                        Experience
+                    </h2>
+                    <article><h5>Full-Stack Developer</h5>Academia Rosario Ballet, Mar 2023 - Present<br />
+                        - Design and develop the website https://www.academiarosarioballet.com.ar as a SPA (single page application).<br />
+                        - Implement over 10 features including CRUD operations and advanced filtering options.<br />
+                        - Utilize HTML, CSS, Bootstrap, jQuery, JavaScript, AJAX, PHP and MySQL.
+                    </article>
+                    <br />
+                    <article><h5>Programmer</h5>Global Game Jam, Rosario, Jan 2013 - Dec 2015<br />
+                        - Participated in the Global Game Jam as a videogame programmer, using JavaScript.<br />
+                        - Developed a game called “Jamming” which can be seen at https://gamejolt.com/games/jamming/46288.<br />
+                    </article>
+                    <p><span style={{fontSize:'11px', marginTop:'5px'}}>(aside from these I've got plenty of experience as teacher and I'm currently director of a dance school)</span></p>
+                    <br />
+                    <h2>
+                        Education
+                    </h2>
+                    <article><h5>Bachelor in Computer Systems Analyst</h5>Esc. Sup. N° 49 Cap. Justo José de Urquiza, Rosario, Mar 2010 - Oct 2011<br />
+                        - Studied Front-End Developer skills in HTML, CSS and JavaScript during the first year.<br />
+                        - Studied Back-End Developer skills in PHP and MySQL during the second year.<br />
+                        - Studied computer science concepts like algorithms, pseudocode, logic, hardware and networking.<br />
+                    </article>
+                    <br />
                     <h2>Certificates</h2>
                     <CertificatesCard images={certifImages} text="Certificados" />
                     <h2>Recommendations</h2>
