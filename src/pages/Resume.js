@@ -45,13 +45,13 @@ export default function Resume() {
                     <h2>
                         Experience
                     </h2>
-                    <article><h5>Full-Stack Developer</h5>Academia Rosario Ballet, Mar 2023 - Present<br />
+                    <article><h5>Full-Stack Developer</h5><h6>Academia Rosario Ballet, Mar 2023 - Present</h6>
                         - Design and develop the website https://www.academiarosarioballet.com.ar as a SPA (single page application).<br />
                         - Implement over 10 features including CRUD operations and advanced filtering options.<br />
                         - Utilize HTML, CSS, Bootstrap, jQuery, JavaScript, AJAX, PHP and MySQL.
                     </article>
                     <br />
-                    <article><h5>Programmer</h5>Global Game Jam, Rosario, Jan 2013 - Dec 2015<br />
+                    <article><h5>Programmer</h5><h6>Global Game Jam, Rosario, Jan 2013 - Dec 2015</h6>
                         - Participated in the Global Game Jam as a videogame programmer, using JavaScript.<br />
                         - Developed a game called “Jamming” which can be seen at https://gamejolt.com/games/jamming/46288.<br />
                     </article>
@@ -60,7 +60,7 @@ export default function Resume() {
                     <h2>
                         Education
                     </h2>
-                    <article><h5>Bachelor in Computer Systems Analyst</h5>Esc. Sup. N° 49 Cap. Justo José de Urquiza, Rosario, Mar 2010 - Oct 2011<br />
+                    <article><h5>Bachelor in Computer Systems Analyst</h5><h6>Esc. Sup. N° 49 Cap. Justo José de Urquiza, Rosario, Mar 2010 - Oct 2011</h6>
                         - Studied Front-End Developer skills in HTML, CSS and JavaScript during the first year.<br />
                         - Studied Back-End Developer skills in PHP and MySQL during the second year.<br />
                         - Studied computer science concepts like algorithms, pseudocode, logic, hardware and networking.<br />

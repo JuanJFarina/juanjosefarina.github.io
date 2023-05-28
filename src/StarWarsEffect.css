@@ -10,7 +10,8 @@
   left: 5%;
   margin: 0;
   padding: 0;
-  font-size: 100px;
+  font-size: 150px;
+  font-weight: 700;
   font-family: 'Arial', sans-serif;
   color: #fff200;
   white-space: nowrap;
@@ -22,7 +23,7 @@
 
 @keyframes crawling {
   0% {
-    transform: rotateX(3deg) translateY(0%);
+    transform: translateX(-20%) rotateX(3deg) translateY(0%);
     opacity: 1;
     display: block;
   }
@@ -31,7 +32,7 @@
     display: block;
   }
   100% {
-    transform: rotateX(4deg) translateY(-8000px);
+    transform: translateX(-20%) rotateX(4deg) translateY(-8000px);
     opacity: 0;
     display: none;
   }
@@ -42,7 +43,7 @@
 
 @keyframes crawlMobile {
   0% {
-    transform: translateX(-20%) rotateX(3deg) translateY(0%);
+    transform: translateX(-30%) rotateX(2deg) translateY(0%);
     opacity: 1;
     display: block;
   }
@@ -51,7 +52,7 @@
     display: block;
   }
   100% {
-    transform: translateX(-20%) rotateX(4deg) translateY(-15000px);
+    transform: translateX(-30%) rotateX(3deg) translateY(-15000px);
     opacity: 0;
     display: none;
   }
@@ -62,7 +63,7 @@
 
 @media screen and (max-width: 600px) {
   .crawl {
-    font-size: 50px;
+    font-size: 60px;
     animation: crawlMobile 40s linear;
     animation-fill-mode: forwards;
     animation-iteration-count: 1;

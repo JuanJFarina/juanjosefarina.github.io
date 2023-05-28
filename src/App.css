@@ -85,6 +85,11 @@ a {
   left: 100%;
 }
 
+header nav p.silly {
+  font-size: 14px !important;
+  font-weight: 500 !important;
+}
+
 article {
   border-radius: 10px 10px 10px 10px;
   background-color: rgba(128, 128, 128, 0.5);
@@ -131,6 +136,8 @@ article:hover {
   font-style: italic;
   text-decoration: underline;
   cursor: pointer;
+  color: #848;
+  font-weight: 900;
 }
 
 .certificateCard {
@@ -269,9 +276,9 @@ section input, section textarea, section button {
   }
 }
 
-@media screen and (max-width: 999px) {
+@media screen and (max-width: 700px) {
   .silly {
-    font-size: 8px !important;
+    font-size: 8px;
   }
   nav ul li {
     font-size: 10px;
@@ -360,6 +367,10 @@ section input, section textarea, section button {
 
   .recomCard p {
     padding: 0px;
+    font-size: 12px;
+  }
+
+  article {
     font-size: 12px;
   }
 

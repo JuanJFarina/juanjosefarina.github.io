@@ -46,7 +46,7 @@ function App() {
     setEasterEgg(true);
   }
 
-  setTimeout(launchEasterEgg, 6000);
+  setTimeout(launchEasterEgg, 60000);
 
   function removeStarsMoonsClouds() {
     const stars = document.getElementsByClassName('star');

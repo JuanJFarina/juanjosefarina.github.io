@@ -17,9 +17,10 @@ export default function Contact() {
   const [message, setMessage] = useState('');
 
   const getIsFormValid = () => {
-    if (firstName !== '' && isValidEmail(email) && message !== '') {
+    if (firstName !== '' && isValidEmail(email) && message.length >= 10) {
       return true;
-    } else {
+    }
+    else {
       return false;
     }
   };
@@ -80,7 +81,7 @@ export default function Contact() {
                     <div className="col-6" style={{textAlign:'right'}}>
                       <div className="Field">
                         <label>
-                            <sup>*</sup> First name
+                            <sup style={{color:'#f00'}}>*</sup> First name
                         </label>
                         <input
                           placeholder="First name"
@@ -99,11 +100,14 @@ export default function Contact() {
                         />
                       </div>
                       <div className="Field">
+                        <span style={{color:'#f00'}}>{
+                          isValidEmail(email) ? '' : email !== '' ? 'Invalid ' : email === '' ? '' : ''
+                        }</span>
                         <label>
-                            <sup>*</sup> Email address
+                            <sup style={{color:'#f00'}}>*</sup> Email address
                         </label>
                         <input
-                          placeholder="Email address"
+                          placeholder="Email"
                           name="Email address"
                           value={email}
                           onChange={handleEmail}
@@ -111,9 +115,12 @@ export default function Contact() {
                       </div>
                     </div>
                     <div className="col-6">
-                      <div className="Field">
+                      <div className="Field" style={{textAlign:'right'}}>
+                        <span style={{verticalAlign:'top', color:'#f00'}}>{
+                          message.length >= 10 ? '' : message !== '' ? 'Min. 10 chars ' : message === '' ? '' : ''
+                        }</span>
                         <label style={{verticalAlign:'top'}}>
-                            <sup>*</sup>Message
+                            <sup style={{color:'#f00'}}>*</sup> Message
                         </label>
                         <textarea
                           placeholder="Message"
