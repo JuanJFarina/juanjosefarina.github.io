@@ -100,7 +100,7 @@ export default function Contact() {
                         />
                       </div>
                       <div className="Field">
-                        <span style={{color:'#f00'}}>{
+                        <span className="errorMessage">{
                           isValidEmail(email) ? '' : email !== '' ? 'Invalid ' : email === '' ? '' : ''
                         }</span>
                         <label>
@@ -116,7 +116,7 @@ export default function Contact() {
                     </div>
                     <div className="col-6">
                       <div className="Field" style={{textAlign:'right'}}>
-                        <span style={{verticalAlign:'top', color:'#f00'}}>{
+                        <span className="errorMessage" style={{verticalAlign:'top'}}>{
                           message.length >= 10 ? '' : message !== '' ? 'Min. 10 chars ' : message === '' ? '' : ''
                         }</span>
                         <label style={{verticalAlign:'top'}}>

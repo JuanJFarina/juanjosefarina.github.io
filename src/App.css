@@ -190,6 +190,10 @@ section input, section textarea, section button {
   margin: 10px;
 }
 
+.errorMessage {
+  color: #f00;
+}
+
 @keyframes nightLights {
   0% {
     color: hsl(230, 40%, 80%);
@@ -378,4 +382,7 @@ section input, section textarea, section button {
     width: 100%;
   }
 
+  .errorMessage {
+    font-size: 12px;
+  }
 }
