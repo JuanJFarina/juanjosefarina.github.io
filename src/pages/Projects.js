@@ -38,8 +38,8 @@ export default function Projects() {
     return (
       <main className="container-fluid">
             <div className="row">
-                <div className="col-sm-2 d-none d-sm-block"></div>
-                <div className="col-12 col-sm-8">
+                <div className="col-sm-1 d-none d-sm-block"></div>
+                <div className="col-12 col-sm-10">
                     <h1 style={theme === 'light' ? {animation:'dayLights 5s linear infinite'} : {animation:'nightLights 5s linear infinite'}}>
                         <Write text="Projects" time="1000" delay="0" />
                     </h1>
@@ -122,7 +122,7 @@ export default function Projects() {
                         </div>
                     </FadeIn>
                 </div>
-                <div className="col-sm-2 d-none d-sm-block"></div>
+                <div className="col-sm-1 d-none d-sm-block"></div>
             </div>
         </main>
     )

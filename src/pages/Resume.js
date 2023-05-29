@@ -51,11 +51,16 @@ export default function Resume() {
                         - Utilize HTML, CSS, Bootstrap, jQuery, JavaScript, AJAX, PHP and MySQL.
                     </article>
                     <br />
-                    <article><h5>Programmer</h5><h6>Global Game Jam, Rosario, Jan 2013 - Dec 2015</h6>
+                    <article><h5>Programmer</h5><h6>Global Game Jam, Rosario, Jan 2013 / Dec 2015</h6>
                         - Participated in the Global Game Jam as a videogame programmer, using JavaScript.<br />
-                        - Developed a game called “Jamming” which can be seen at https://gamejolt.com/games/jamming/46288.<br />
+                        - Developed a game called “Jamming” which can be seen at https://gamejolt.com/games/jamming/46288.
                     </article>
-                    <p><span style={{fontSize:'11px', marginTop:'5px'}}>(aside from these I've got plenty of experience as teacher and I'm currently director of a dance school)</span></p>
+                    <br />
+                    <article><h5 style={{textDecoration:'underline'}}>Non-Dev Experience</h5><h6>Dance Teacher, Rosario, Jan 2012 - Jan 2023</h6>
+                        - I've taught in several institutions of Rosario and participated in numerous events and seminars both regionals and internationals.<br />
+                        - I've lead classes with dozens of participants and coached students for many competitions.<br />
+                        - Since january of 2020 I'm founding director of an important ballet school, and I've taught many teacher seminars internationally.
+                    </article>
                     <br />
                     <h2>
                         Education
