@@ -22,6 +22,7 @@ function App() {
   useEffect(() => {
     if (theme === 'dark') {
       document.getElementById('sky').style.setProperty('background-color', '#000');
+      document.getElementById('sky').style.setProperty('background-image', '');
       removeStarsMoonsClouds();
       shootingStars.forEach(intervalId => clearInterval(intervalId));
       setShootingStars([]);
@@ -31,7 +32,8 @@ function App() {
       setShootingStars(prevArray => [...prevArray, intervalId]);
     }
     else {
-      document.getElementById('sky').style.setProperty('background-color', '#aaf');
+      document.getElementById('sky').style.setProperty('background-color', '#88f');
+      document.getElementById('sky').style.setProperty('background-image', 'linear-gradient(to top, #88c, #88f)');
       removeStarsMoonsClouds();
       shootingStars.forEach(intervalId => clearInterval(intervalId));
       setShootingStars([]);

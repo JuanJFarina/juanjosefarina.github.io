@@ -1,6 +1,6 @@
 .star {
   position: absolute;
-  background-color: #fff; /* Set the color for the stars */
+  background-color: var(--color); /* Set the color for the stars */
   border-radius: 50%;
   animation: twinkle 3s infinite ease-in-out;
   z-index: 0;

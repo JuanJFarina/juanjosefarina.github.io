@@ -5,6 +5,7 @@
   position: absolute;
   box-shadow: 0 0 20px 20px #fff;
   animation: travel 300s infinite linear;
+  background-image: radial-gradient(circle at 30% 30%, #fff 45%, rgba(128, 128, 128, 0.03) 50%, #fff 55%);
   z-index: 0;
 }
 
@@ -29,7 +30,7 @@
   width: 300px;
   height: 200px;
   animation: rotation 600s infinite linear;
-  z-index: 0;
+  z-index: 1;
 }
 
 @keyframes rotation {

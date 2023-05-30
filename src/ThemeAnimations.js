@@ -110,15 +110,46 @@ export function createSun() {
       default:
     }
     sun.style.left = (position - 10) + '%'; // Horizontal position
-    sun.style.top = '-25%';// Vertical position
+    sun.style.top = '-150px';// Vertical position
     daySky.appendChild(sun);
   }
 
+export function generateRandomColor(index) {
+  let tempS = '#';
+  for(let i = 0; i < index; i++) {
+    let temp = Math.round(Math.random() * 5);
+    switch(temp) {
+      case 0:
+        tempS += 'a';
+        break;
+      case 1:
+        tempS += 'b';
+        break;
+      case 2:
+        tempS += 'c';
+        break;
+      case 3:
+        tempS += 'd';
+        break;
+      case 4:
+        tempS += 'e';
+        break;
+      case 5:
+        tempS += 'f';
+        break;
+    }
+  }
+  return tempS;
+}
+
 export function createStars() {
     const nightSky = document.getElementById('sky');
-    const numStars = 100; // Number of stars to create
+    const numStars = 500; // Number of stars to create
     for (let i = 0; i < numStars; i++) {
       const star = document.createElement('div');
+      const rndColor = generateRandomColor(3);
+      console.log(rndColor);
+      star.style.setProperty('--color', rndColor);
       star.className = 'star';
       star.style.width = Math.random() * 2 + 'px'; // Random star size
       star.style.height = star.style.width;
@@ -141,8 +172,8 @@ export function createClouds() {
       cloud.style.setProperty('--rotation', (Math.floor(Math.random() * 360) + 'deg'));
       cloud.style.setProperty('--randomX', randomX);
       cloud.style.setProperty('--randomY', randomY);
-      cloud.style.width = (100 + (Math.random() * 100)) + 'px'; // Random cloud size
-      cloud.style.height = (100 + (Math.random() * 100)) + 'px'; // Random cloud size
+      cloud.style.width = (150 + (Math.random() * 150)) + 'px'; // Random cloud size
+      cloud.style.height = (150 + (Math.random() * 150)) + 'px'; // Random cloud size
       cloud.style.left = (5 + (Math.random() * 80)) + '%'; // Random horizontal position
       cloud.style.top = (5 + (Math.random() * 60)) + '%'; // Random vertical position
       daySky.appendChild(cloud);
