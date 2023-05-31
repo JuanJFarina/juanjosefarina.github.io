@@ -25,7 +25,7 @@ export default function Legacy() {
             <div className="col-sm-1 d-none d-sm-block"></div>
             <div className="col-12 col-sm-10">
                 <h1 style={theme === 'light' ? {animation:'dayLights 5s linear infinite'} : {animation:'nightLights 5s linear infinite'}}>
-                    <Write text="Projects" time="1000" delay="0" />
+                    <Write text="Legacy Projects" time="1000" delay="0" />
                 </h1>
                 <br />
                 <FadeIn fade="1000" delay="0">
