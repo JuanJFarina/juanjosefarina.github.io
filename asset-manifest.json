@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.59e66a8a.css",
-    "main.js": "/portfolio/static/js/main.d6ced7ea.js",
+    "main.js": "/portfolio/static/js/main.8e998ea5.js",
     "static/js/787.1ed0c42c.chunk.js": "/portfolio/static/js/787.1ed0c42c.chunk.js",
     "static/media/C0.jpg": "/portfolio/static/media/C0.136d7982e9db1026317f.jpg",
     "static/media/C5C.jpg": "/portfolio/static/media/C5C.401b79cfe2d58c8d2621.jpg",
@@ -18,8 +18,11 @@
     "static/media/C15.jpg": "/portfolio/static/media/C15.e8f8f23ebbc114711104.jpg",
     "static/media/C5.jpg": "/portfolio/static/media/C5.3ae2fe245db6b457516c.jpg",
     "static/media/C4.jpg": "/portfolio/static/media/C4.05a04d5c7eae67b8f594.jpg",
+    "static/media/LEGACYMp3Organizer1.png": "/portfolio/static/media/LEGACYMp3Organizer1.c4bbb6e618ba0c60a547.png",
     "static/media/C1.png": "/portfolio/static/media/C1.a6cb94d1276280bd4d28.png",
+    "static/media/LEGACYAhorcado.png": "/portfolio/static/media/LEGACYAhorcado.92b3d335a2a8a29fad9f.png",
     "static/media/C2.png": "/portfolio/static/media/C2.958ad73b525c133d2584.png",
+    "static/media/LEGACYMp3Organizer2.jpeg": "/portfolio/static/media/LEGACYMp3Organizer2.143e5cf6c38d7de4699d.jpeg",
     "static/media/ARB1.jpeg": "/portfolio/static/media/ARB1.e200fbef1b16982f0c7f.jpeg",
     "static/media/ARB4.jpeg": "/portfolio/static/media/ARB4.ca89dffc79d9b62f33a1.jpeg",
     "static/media/ARB2.jpeg": "/portfolio/static/media/ARB2.587923ce09248e70612d.jpeg",
@@ -31,6 +34,7 @@
     "static/media/META2.jpeg": "/portfolio/static/media/META2.3994d03240f510d2d63b.jpeg",
     "static/media/FCC1.jpeg": "/portfolio/static/media/FCC1.10b09f54151c2ad6f61e.jpeg",
     "static/media/FCC5.jpeg": "/portfolio/static/media/FCC5.372352ad0fcbf97f41e3.jpeg",
+    "static/media/LEGACYNumerologia.jpeg": "/portfolio/static/media/LEGACYNumerologia.c6a5641d4ed20cdae332.jpeg",
     "static/media/JAMMING3.jpeg": "/portfolio/static/media/JAMMING3.d2d35aa0fc854fdfcf7e.jpeg",
     "static/media/FCC4.jpeg": "/portfolio/static/media/FCC4.0f90ecca0a340bfb741c.jpeg",
     "static/media/JAMMING2.jpeg": "/portfolio/static/media/JAMMING2.762dab9850af7bcef819.jpeg",
@@ -47,11 +51,11 @@
     "static/media/BACK3.jpeg": "/portfolio/static/media/BACK3.65c7f20895ae52efe2a3.jpeg",
     "index.html": "/portfolio/index.html",
     "main.59e66a8a.css.map": "/portfolio/static/css/main.59e66a8a.css.map",
-    "main.d6ced7ea.js.map": "/portfolio/static/js/main.d6ced7ea.js.map",
+    "main.8e998ea5.js.map": "/portfolio/static/js/main.8e998ea5.js.map",
     "787.1ed0c42c.chunk.js.map": "/portfolio/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.59e66a8a.css",
-    "static/js/main.d6ced7ea.js"
+    "static/js/main.8e998ea5.js"
   ]
 }
