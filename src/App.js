@@ -22,10 +22,7 @@ function App() {
   const {theme} = useTheme();
 
   useEffect(() => {
-    if(theme === 'dark' && !started) {
-      setStarted(true);
-    }
-    else if(theme === 'dark' && started) {
+    if(theme === 'dark') {
       document.getElementById('sky').style.setProperty('background-color', '#000');
       document.getElementById('sky').style.setProperty('background-image', '');
       removeStarsMoonsClouds();
@@ -33,8 +30,13 @@ function App() {
       setShootingStars([]);
       Logic.createMoon();
       Logic.createStars();
-      const intervalId = setInterval(Logic.createShootingStar, 4000);
-      setShootingStars(prevArray => [...prevArray, intervalId]);
+      if(started) {
+        const intervalId = setInterval(Logic.createShootingStar, 4000);
+        setShootingStars(prevArray => [...prevArray, intervalId]);
+      }
+      else {
+        setStarted(true);
+      }
     }
     else {
       document.getElementById('sky').style.setProperty('background-color', '#88f');
