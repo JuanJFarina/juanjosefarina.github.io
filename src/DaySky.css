@@ -26,11 +26,29 @@
   background-color: #ff8;
   background-image: radial-gradient(circle at 30% 30%, #ff4 10%, #ff0 60%);
   border-radius: 50%;
-  box-shadow: 0 0 20px 20px #ff0;
+  opacity: 0.75;
   width: 300px;
   height: 200px;
-  animation: rotation 600s infinite linear;
-  z-index: 1;
+  animation: rotation 600s infinite linear, shine 10s infinite linear;
+  z-index: 0;
+}
+
+@keyframes shine {
+  0% {
+    box-shadow: 0 0 30px 30px #ff0;
+  }
+  50% {
+    box-shadow: 0 0 10px 10px #ff0;
+  }
+  50% {
+    box-shadow: 0 0 20px 20px #ff0;
+  }
+  50% {
+    box-shadow: 0 0 15px 15px #ff0;
+  }
+  100% {
+    box-shadow: 0 0 30px 30px #ff0;
+  }
 }
 
 @keyframes rotation {

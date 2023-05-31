@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import ProjectCard from '../components/ProjectCard';
 import Write from '../components/Write';
 import FadeIn from '../components/FadeIn';
@@ -45,7 +46,7 @@ export default function Projects() {
                     </h1>
                     <br />
                     <FadeIn fade="1000" delay="0">
-                        <p>These are some of my most recent projects:</p>
+                        <p>Below are some of my most recent projects. If you want to see my legacy projects (2010-2023) you can do it <Link className="legacyLink" to="/legacy">here</Link></p>
                         <div className="container-fluid">
                             <div className="row">
                                 <div className="col-12 col-sm-6">

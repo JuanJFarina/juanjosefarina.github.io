@@ -56,6 +56,11 @@ export default function Resume() {
                         - Developed a game called “Jamming” which can be seen at https://gamejolt.com/games/jamming/46288.
                     </article>
                     <br />
+                    <article><h5>Developer</h5><h6>Freelance, Rosario, Mar 2010 - Dec 2022</h6>
+                        - During these period I've developed over a dozen of personal applications in JAVA, JS, SVG and OpenGL.<br />
+                        - Some of these can be seen at the Legacy link of my Projects section.
+                    </article>
+                    <br />
                     <article><h5 style={{textDecoration:'underline'}}>Non-Dev Experience</h5><h6>Dance Teacher, Rosario, Jan 2012 - Jan 2023</h6>
                         - I've taught in several institutions of Rosario and participated in numerous events and seminars both regionals and internationals.<br />
                         - I've lead classes with dozens of participants and coached students for many competitions.<br />

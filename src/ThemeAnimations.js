@@ -110,7 +110,7 @@ export function createSun() {
       default:
     }
     sun.style.left = (position - 10) + '%'; // Horizontal position
-    sun.style.top = '-150px';// Vertical position
+    sun.style.top = '-200px';// Vertical position
     daySky.appendChild(sun);
   }
 

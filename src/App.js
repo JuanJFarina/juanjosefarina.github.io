@@ -10,6 +10,7 @@ import Welcome from './pages/Welcome';
 import Projects from './pages/Projects';
 import Resume from './pages/Resume';
 import Contact from './pages/Contact';
+import Legacy from './pages/Legacy';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import { Route, Routes, BrowserRouter } from 'react-router-dom';
@@ -17,10 +18,14 @@ import { Route, Routes, BrowserRouter } from 'react-router-dom';
 function App() {
   const [shootingStars, setShootingStars] = useState([]);
   const [easterEgg, setEasterEgg] = useState(false);
+  const [started, setStarted] = useState(false);
   const {theme} = useTheme();
 
   useEffect(() => {
-    if (theme === 'dark') {
+    if(theme === 'dark' && !started) {
+      setStarted(true);
+    }
+    else if(theme === 'dark' && started) {
       document.getElementById('sky').style.setProperty('background-color', '#000');
       document.getElementById('sky').style.setProperty('background-image', '');
       removeStarsMoonsClouds();
@@ -39,6 +44,7 @@ function App() {
       setShootingStars([]);
       Logic.createSun();
       Logic.createClouds();
+      setStarted(true);
     }
   }, [theme]);
 
@@ -138,6 +144,7 @@ function App() {
                 <Routes>
                   <Route path="/portfolio" element={<Welcome />} />
                   <Route path="/projects" element={<Projects />} />
+                  <Route path="/legacy" element={<Legacy />} />
                   <Route path="/Resume" element={<Resume />} />
                   <Route path="/contact" element={<Contact />} />
                 </Routes>
