@@ -135,6 +135,7 @@ export default function Contact() {
                   <div className="row">
                     <div className="col-12">
                       <button
+                        className="smtBtn"
                         type="submit"
                         disabled={!getIsFormValid()}
                         onSubmit={handleSubmit}

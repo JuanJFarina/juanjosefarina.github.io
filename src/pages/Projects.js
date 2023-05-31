@@ -105,6 +105,7 @@ export default function Projects() {
                                 </div>
                             </div>
                             <div className="row">
+                                <div className="col-12 col-sm-3"></div>
                                 <div className="col-12 col-sm-6">
                                     <ProjectCard text="Jamming" images={imagesJamming} url="https://gamejolt.com/games/jamming/46288">
                                         <p style={{margin:'4px'}}>
@@ -118,7 +119,7 @@ export default function Projects() {
                                         </p>
                                     </ProjectCard>
                                 </div>
-                                <div className="col-12 col-sm-6"></div>
+                                <div className="col-12 col-sm-3"></div>
                             </div>
                         </div>
                     </FadeIn>

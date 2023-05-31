@@ -38,7 +38,7 @@ function App() {
     }
     else {
       document.getElementById('sky').style.setProperty('background-color', '#88f');
-      document.getElementById('sky').style.setProperty('background-image', 'linear-gradient(to top, #88c, #88f)');
+      document.getElementById('sky').style.setProperty('background-image', 'linear-gradient(to top, #88a, #88d)');
       removeStarsMoonsClouds();
       shootingStars.forEach(intervalId => clearInterval(intervalId));
       setShootingStars([]);

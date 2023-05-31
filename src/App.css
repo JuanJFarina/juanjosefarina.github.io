@@ -92,7 +92,7 @@ header nav p.silly {
 
 article {
   border-radius: 10px 10px 10px 10px;
-  background-color: rgba(128, 128, 128, 0.7);
+  background-color: rgba(128, 128, 128, 0.4);
   backdrop-filter: blur(4px);
   padding: 10px;
   font-style: italic;
@@ -170,9 +170,10 @@ article:hover {
 
 .recomCard {
   border-radius: 10px 10px 10px 10px;
-  background-color: rgba(128, 128, 128, 0.5);
+  background-color: rgba(128, 128, 128, 0.4);
   backdrop-filter: blur(4px);
   padding: 10px;
+  margin-bottom: 10px;
   min-height: 300px;
   max-height: 400px;
   text-align: left;
@@ -192,7 +193,7 @@ article:hover {
 
 section {
   border-radius: 10px 10px 10px 10px;
-  background-color: rgba(128, 128, 128, 0.5);
+  background-color: rgba(128, 128, 128, 0.4);
   backdrop-filter: blur(4px);
   padding: 10px;
 }
@@ -203,6 +204,32 @@ section input, section textarea, section button {
 
 .errorMessage {
   color: #f00;
+}
+
+.smtBtn {
+  transition: all 0.2s linear;
+}
+
+.smtBtn:disabled {
+  padding: 5px;
+  border-radius: 15px;
+  border: 2px solid rgba(128, 64, 128, 0);
+}
+
+.smtBtn:enabled {
+  outline: none;
+  padding: 5px;
+  border: 2px solid rgba(128, 64, 128, 0);
+  border-radius: 15px;
+  background-color: #848;
+  color: #000;
+}
+
+.smtBtn:enabled:active {
+  outline: none;
+  border: 2px solid rgba(128, 64, 128, 1);
+  background-color: #fff;
+  color: #848;
 }
 
 @keyframes nightLights {
