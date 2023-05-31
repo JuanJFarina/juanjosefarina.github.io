@@ -3,6 +3,7 @@ import { useTheme } from '../components/ThemeContext';
 import ProjectCard from '../components/ProjectCard';
 import Write from '../components/Write';
 import FadeIn from '../components/FadeIn';
+import borderlands from '../assets/LEGACYBorderlands.jpeg';
 import numerology from '../assets/LEGACYNumerologia.jpeg';
 import corazontachero from '../assets/LEGACYCorazonDeTachero.jpg';
 import apleno from '../assets/LEGACYAPleno.jpeg';
@@ -12,6 +13,7 @@ import ahorcado from '../assets/LEGACYAhorcado.png';
 
 export default function Legacy() {
   const {theme} = useTheme();
+  const imagesBorderlands = [borderlands];
   const imagesNumerology = [numerology];
   const imagesCorazon = [corazontachero];
   const imagesAPleno = [apleno];
@@ -27,9 +29,22 @@ export default function Legacy() {
                 </h1>
                 <br />
                 <FadeIn fade="1000" delay="0">
-                    <p>These are legacy projects that I've developed for personal leisure through my "programming as hobby" years (2012-2023):</p>
+                    <p>These are some of my legacy projects that I've developed for personal leisure throughout my "programming as hobby" years (2012-2023).<br />Please keep in mind that most of these were never intended for the public but rather for personal interest:</p>
                     <div className="container-fluid">
                         <div className="row">
+                            <div className="col-12 col-sm-6">
+                                <ProjectCard text="Borderlands DPS Calc" images={imagesNumerology} url="https://github.com/JuanJFarina/BorderlandsDPSCalculator">
+                                    <p style={{margin:'4px'}}>
+                                        This app calculates the damage per second of weapons in Borderlands, a PC game where weapons are generated procedurally. It was developed in HTML and JavaScript between 2015-2017 and takes into consideration the weapon's Damage, Accuracy, Firerate and Bullets per load.
+                                    </p>
+                                    <p style={{margin:'4px'}}>
+                                        <span style={{color:'blue'}}>HTML, JavaScript</span>
+                                    </p>
+                                    <p style={{margin:'4px'}}>
+                                        <span style={{color:'blue'}}>#Front-End</span>
+                                    </p>
+                                </ProjectCard>
+                            </div>
                             <div className="col-12 col-sm-6">
                                 <ProjectCard text="Numerology App" images={imagesNumerology} url="https://github.com/JuanJFarina/LegacyNumerologyApp">
                                     <p style={{margin:'4px'}}>
@@ -43,6 +58,8 @@ export default function Legacy() {
                                     </p>
                                 </ProjectCard>
                             </div>
+                        </div>
+                        <div className="row">
                             <div className="col-12 col-sm-6">
                                 <ProjectCard text="Corazon de Tachero" images={imagesCorazon} url="https://github.com/JuanJFarina/CorazonDeTachero">
                                     <p style={{margin:'4px'}}>
@@ -53,8 +70,6 @@ export default function Legacy() {
                                     </p>
                                 </ProjectCard>
                             </div>
-                        </div>
-                        <div className="row">
                             <div className="col-12 col-sm-6">
                                 <ProjectCard text="A Pleno" images={imagesAPleno} url="https://github.com/JuanJFarina/LegacyAPleno">
                                     <p style={{margin:'4px'}}>
@@ -68,7 +83,6 @@ export default function Legacy() {
                                     </p>
                                 </ProjectCard>
                             </div>
-                            <div className="col-12 col-sm-6"></div>
                         </div>
                         <div className="row">
                             <div className="col-12 col-sm-6">
@@ -91,11 +105,6 @@ export default function Legacy() {
                                     </p>
                                 </ProjectCard>
                             </div>
-                        </div>
-                        <div className="row">
-                            <div className="col-12 col-sm-6">
-                            </div>
-                            <div className="col-12 col-sm-6"></div>
                         </div>
                     </div>
                 </FadeIn>
