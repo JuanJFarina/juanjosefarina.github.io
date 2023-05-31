@@ -29,11 +29,11 @@ export default function Legacy() {
                 </h1>
                 <br />
                 <FadeIn fade="1000" delay="0">
-                    <p>These are some of my legacy projects that I've developed for personal leisure throughout my "programming as hobby" years (2012-2023).<br />Please keep in mind that most of these were never intended for the public but rather for personal interest:</p>
+                    <p>These are some of my legacy projects which I've developed for personal leisure throughout my "programming as hobby" years (2012-2023).<br />Please keep in mind that most of these were never intended for the public but rather for personal interest:</p>
                     <div className="container-fluid">
                         <div className="row">
                             <div className="col-12 col-sm-6">
-                                <ProjectCard text="Borderlands DPS Calc" images={imagesNumerology} url="https://github.com/JuanJFarina/BorderlandsDPSCalculator">
+                                <ProjectCard text="Borderlands DPS Calc" images={imagesBorderlands} url="https://github.com/JuanJFarina/BorderlandsDPSCalculator">
                                     <p style={{margin:'4px'}}>
                                         This app calculates the damage per second of weapons in Borderlands, a PC game where weapons are generated procedurally. It was developed in HTML and JavaScript between 2015-2017 and takes into consideration the weapon's Damage, Accuracy, Firerate and Bullets per load.
                                     </p>
