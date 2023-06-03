@@ -142,7 +142,7 @@ function App() {
           </div>
         </div>
         <div className="row flex-grow-1">
-          <div className="col-12" style={{fontWeight:500}}>
+          <div className="col-12" style={{fontWeight:700}}>
                 <Routes>
                   <Route path="/portfolio" element={<Welcome />} />
                   <Route path="/projects" element={<Projects />} />

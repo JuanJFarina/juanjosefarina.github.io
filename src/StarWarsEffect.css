@@ -16,7 +16,7 @@
   color: #fff200;
   white-space: nowrap;
   transform-origin: 50% 100%;
-  animation: crawling 20s linear;
+  animation: crawling 10s linear;
   animation-fill-mode: forwards;
   animation-iteration-count: 1;
 }
@@ -27,16 +27,20 @@
     opacity: 1;
     display: block;
   }
-  95% {
+  75% {
     opacity: 1;
+  }
+  95% {
+    opacity: 0;
     display: block;
   }
   100% {
-    transform: translateX(-20%) rotateX(4deg) translateY(-8000px);
+    transform: translateX(-20%) rotateX(4deg) translateY(-4000px);
     opacity: 0;
     display: none;
   }
   to {
+    opacity: 0;
     display: none;
   }
 }
@@ -47,16 +51,20 @@
     opacity: 1;
     display: block;
   }
-  95% {
+  75% {
     opacity: 1;
+  }
+  95% {
+    opacity: 0;
     display: block;
   }
   100% {
-    transform: translateX(-30%) rotateX(3deg) translateY(-15000px);
+    transform: translateX(-30%) rotateX(3deg) translateY(-5000px);
     opacity: 0;
     display: none;
   }
   to {
+    opacity: 0;
     display: none;
   }
 }
@@ -64,7 +72,7 @@
 @media screen and (max-width: 600px) {
   .crawl {
     font-size: 60px;
-    animation: crawlMobile 40s linear;
+    animation: crawlMobile 10s linear;
     animation-fill-mode: forwards;
     animation-iteration-count: 1;
   }
