@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.f5dfd9a1.css",
-    "main.js": "/portfolio/static/js/main.d1bdac63.js",
+    "main.css": "/portfolio/static/css/main.f3c1fd77.css",
+    "main.js": "/portfolio/static/js/main.8c082e57.js",
     "static/js/787.1ed0c42c.chunk.js": "/portfolio/static/js/787.1ed0c42c.chunk.js",
     "static/media/C0.jpg": "/portfolio/static/media/C0.136d7982e9db1026317f.jpg",
     "static/media/C5C.jpg": "/portfolio/static/media/C5C.401b79cfe2d58c8d2621.jpg",
@@ -53,12 +53,12 @@
     "static/media/BACK3.jpeg": "/portfolio/static/media/BACK3.65c7f20895ae52efe2a3.jpeg",
     "static/media/LEGACYBorderlands.jpeg": "/portfolio/static/media/LEGACYBorderlands.990a8c215c4507b626a7.jpeg",
     "index.html": "/portfolio/index.html",
-    "main.f5dfd9a1.css.map": "/portfolio/static/css/main.f5dfd9a1.css.map",
-    "main.d1bdac63.js.map": "/portfolio/static/js/main.d1bdac63.js.map",
+    "main.f3c1fd77.css.map": "/portfolio/static/css/main.f3c1fd77.css.map",
+    "main.8c082e57.js.map": "/portfolio/static/js/main.8c082e57.js.map",
     "787.1ed0c42c.chunk.js.map": "/portfolio/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f5dfd9a1.css",
-    "static/js/main.d1bdac63.js"
+    "static/css/main.f3c1fd77.css",
+    "static/js/main.8c082e57.js"
   ]
 }
