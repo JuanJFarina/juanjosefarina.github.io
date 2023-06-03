@@ -17,8 +17,8 @@ export default function CertificatesCard(props) {
         }
         setTimeout(() => {
             if(image.current) {image.current.style.opacity = '1';}
-        }, 300);
-      }, 2000)
+        }, 200);
+      }, 1500)
     );
   };
 
@@ -27,7 +27,7 @@ export default function CertificatesCard(props) {
         transition();
         setFadeOutId(setTimeout(() => {
             if(image.current) {image.current.style.opacity = '0';}
-        }, 1700));
+        }, 1300));
         return () => {
         clearTimeout(timeoutId);
         };

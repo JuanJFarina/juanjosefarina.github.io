@@ -144,11 +144,10 @@ export function generateRandomColor(index) {
 
 export function createStars() {
     const nightSky = document.getElementById('sky');
-    const numStars = 500; // Number of stars to create
+    const numStars = 400; // Number of stars to create
     for (let i = 0; i < numStars; i++) {
       const star = document.createElement('div');
       const rndColor = generateRandomColor(3);
-      console.log(rndColor);
       star.style.setProperty('--color', rndColor);
       star.className = 'star';
       star.style.width = Math.random() * 2 + 'px'; // Random star size
@@ -161,7 +160,7 @@ export function createStars() {
 
 export function createClouds() {
     const daySky = document.getElementById('sky');
-    const numClouds = (20 + (Math.round(Math.random() * 10))); // Number of clouds to create
+    const numClouds = (3 + (Math.round(Math.random() * 2))); // Number of clouds to create
     const randomX = Math.round(Math.random() * 100);
     const randomY = Math.round(Math.random() * 100);
     for (let i = 0; i < numClouds; i++) {
@@ -169,11 +168,11 @@ export function createClouds() {
       const opacity = 0.8 + (Math.random() * 0.2);
       cloud.className = 'cloud';
       cloud.style.setProperty('--opacity', opacity);
-      cloud.style.setProperty('--rotation', (Math.floor(Math.random() * 360) + 'deg'));
+      cloud.style.setProperty('--rotation', (Math.floor(Math.random() * 30) + 'deg'));
       cloud.style.setProperty('--randomX', randomX);
       cloud.style.setProperty('--randomY', randomY);
-      cloud.style.width = (150 + (Math.random() * 150)) + 'px'; // Random cloud size
-      cloud.style.height = (150 + (Math.random() * 150)) + 'px'; // Random cloud size
+      cloud.style.width = (400 + (Math.random() * 400)) + 'px'; // Random cloud size
+      cloud.style.height = (200 + (Math.random() * 200)) + 'px'; // Random cloud size
       cloud.style.left = (5 + (Math.random() * 80)) + '%'; // Random horizontal position
       cloud.style.top = (5 + (Math.random() * 60)) + '%'; // Random vertical position
       daySky.appendChild(cloud);

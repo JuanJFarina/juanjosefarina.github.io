@@ -40,7 +40,7 @@ function App() {
     }
     else {
       document.getElementById('sky').style.setProperty('background-color', '#88f');
-      document.getElementById('sky').style.setProperty('background-image', 'linear-gradient(to top, #88a, #88d)');
+      document.getElementById('sky').style.setProperty('background-image', 'linear-gradient(to top, #99c, #88d)');
       removeStarsMoonsClouds();
       shootingStars.forEach(intervalId => clearInterval(intervalId));
       setShootingStars([]);
@@ -142,7 +142,7 @@ function App() {
           </div>
         </div>
         <div className="row flex-grow-1">
-          <div className="col-12" style={theme === 'dark' ? {textShadow:'1.5px 1.5px 1px #444'} : {textShadow:'1.5px 1.5px 1px #ccc'}}>
+          <div className="col-12" style={{fontWeight:500}}>
                 <Routes>
                   <Route path="/portfolio" element={<Welcome />} />
                   <Route path="/projects" element={<Projects />} />

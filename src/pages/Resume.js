@@ -41,7 +41,6 @@ export default function Resume() {
                 <br />
                 <FadeIn fade="1000" delay="0">
                     <p>You can see my full resume clicking <span className="resumeLink" onClick={resumeLink}>here</span> (this will open another tab)</p>
-                    <br />
                     <h2>
                         Experience
                     </h2>
@@ -49,22 +48,19 @@ export default function Resume() {
                         - Design and develop the website https://www.academiarosarioballet.com.ar as a SPA (single page application).<br />
                         - Implement over 10 features including CRUD operations and advanced filtering options.<br />
                         - Utilize HTML, CSS, Bootstrap, jQuery, JavaScript, AJAX, PHP and MySQL.
-                    </article>
-                    <br />
-                    <article><h5>Programmer</h5><h6>Global Game Jam, Rosario, Jan 2013 / Dec 2015</h6>
-                        - Participated in the Global Game Jam as a videogame programmer, using JavaScript.<br />
-                        - Developed a game called “Jamming” which can be seen at https://gamejolt.com/games/jamming/46288.
-                    </article>
-                    <br />
-                    <article><h5>Developer</h5><h6>Freelance, Rosario, Mar 2010 - Dec 2022</h6>
-                        - During these period I've developed over a dozen of personal applications in JAVA, JS, SVG and OpenGL.<br />
-                        - Some of these can be seen at the Legacy link of my Projects section.
-                    </article>
-                    <br />
-                    <article><h5 style={{textDecoration:'underline'}}>Non-Dev Experience</h5><h6>Dance Teacher, Rosario, Jan 2012 - Jan 2023</h6>
+                    <br /><hr style={theme === 'dark' ? {borderColor:'#fff'} : {borderColor:'#000'}} />
+                    <h5 style={{textDecoration:'underline'}}>Non-Dev Experience</h5><h6>Dance Teacher, Rosario, Jan 2012 - Present</h6>
                         - I've taught in several institutions of Rosario and participated in numerous events and seminars both regionals and internationals.<br />
                         - I've lead classes with dozens of participants and coached students for many competitions.<br />
                         - Since january of 2020 I'm founding director of an important ballet school, and I've taught many teacher seminars internationally.
+                    <br /><hr style={theme === 'dark' ? {borderColor:'#fff'} : {borderColor:'#000'}} />
+                    <h5>Developer</h5><h6>Freelance, Rosario, Mar 2010 - Dec 2022</h6>
+                        - During these period I've developed over a dozen of personal applications in JAVA, JS, SVG and OpenGL.<br />
+                        - Some of these can be seen at the Legacy link of my Projects section.
+                    <br /><hr style={theme === 'dark' ? {borderColor:'#fff'} : {borderColor:'#000'}} />
+                    <h5>Programmer</h5><h6>Global Game Jam, Rosario, Jan 2013 / Dec 2015</h6>
+                        - Participated in the Global Game Jam as a videogame programmer, using JavaScript.<br />
+                        - Developed a game called “Jamming” which can be seen at https://gamejolt.com/games/jamming/46288.
                     </article>
                     <br />
                     <h2>
