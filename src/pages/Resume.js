@@ -20,11 +20,13 @@ import C12 from '../assets/C12.jpg';
 import C13 from '../assets/C13.jpg';
 import C14 from '../assets/C14.jpg';
 import C15 from '../assets/C15.jpg';
+import C01 from '../assets/C01.jpg';
+import C02 from '../assets/C02.jpg';
 import CertificatesCard from '../components/CertificatesCard';
 
 export default function Resume() {
     const {theme} = useTheme();
-    const certifImages = [C0, C1, C2, C3, C4, C5, C5C, C6, C7, C8, C9, C10, C11, C12, C13, C14, C15];
+    const certifImages = [C02, C01, C0, C1, C2, C3, C4, C5, C5C, C6, C7, C8, C9, C10, C11, C12, C13, C14, C15];
 
     const resumeLink = () => {
         window.open('https://docs.google.com/document/d/15zYYc_d1gcCBmfVd-C04rti5hQeozUA5MVOWW5wIuFg/edit?usp=sharing', '_blank');

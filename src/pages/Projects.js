@@ -27,6 +27,7 @@ import BACK5 from '../assets/BACK5.jpeg';
 import META1 from '../assets/META1.jpeg';
 import META2 from '../assets/META2.jpeg';
 import META3 from '../assets/META3.jpeg';
+import AN1 from '../assets/AN1.jpg';
 
 export default function Projects() {
     const {theme} = useTheme();
@@ -35,6 +36,7 @@ export default function Projects() {
     const imagesFcc = [FCC1, FCC2, FCC3, FCC4, FCC5];
     const imagesBack = [BACK1, BACK2, BACK3, BACK4, BACK5];
     const imagesMeta = [META1, META2, META3];
+    const imagesAn = [AN1];
 
     return (
       <main className="container-fluid">
@@ -50,18 +52,33 @@ export default function Projects() {
                         <div className="container-fluid">
                             <div className="row">
                                 <div className="col-12 col-sm-6">
+                                    <ProjectCard text="Arte Numerológico" images={imagesAn} url="https://mern-arte-numerologico.vercel.app">
+                                        <p style={{margin:'4px'}}>
+                                            Arte Numerológico is a personal project for a website with numerology services. It includes many features, besides the numerology algorithms, you can register, login, have personalized services and interpretations, and there is also two API endpoints so anyone can use in their websites
+                                        </p>
+                                        <p style={{margin:'4px'}}>
+                                            <span style={{color:"blue"}}>HTML, CSS, Bootstrap, JavaScript, React</span>, <span style={{color:'red'}}>Node, Express, Sendgrid, Mongoose, MongoDB</span>
+                                        </p>
+                                        <p style={{margin:'4px'}}>
+                                        <span style={{color:"blue"}}>#Front-End</span><span style={{color:'red'}}> #Back-End</span>
+                                        </p>
+                                    </ProjectCard>
+                                </div>
+                                <div className="col-12 col-sm-6">
                                     <ProjectCard text="Back End Development and APIs" images={imagesBack} url="https://replit.com/@Juan-JoseJos952">
                                         <p style={{margin:'4px'}}>
                                             Final projects from my Back End Development and APIs Certification from FreeCodeCamp.
                                         </p>
                                         <p style={{margin:'4px'}}>
-                                            <span style={{color:'red'}}>Node, MongoDB, Mongoose</span>
+                                            <span style={{color:'red'}}>Node, Express, Mongoose, MongoDB</span>
                                         </p>
                                         <p style={{margin:'4px'}}>
                                             <span style={{color:'red'}}>#Back-End</span>
                                         </p>
                                     </ProjectCard>
                                 </div>
+                            </div>
+                            <div className="row">
                                 <div className="col-12 col-sm-6">
                                     <ProjectCard text="Meta Certification" images={imagesMeta} url="https://juanjfarina.github.io/CapstoneProject">
                                         <p style={{margin:'4px'}}>
@@ -75,8 +92,6 @@ export default function Projects() {
                                         </p>
                                     </ProjectCard>
                                 </div>
-                            </div>
-                            <div className="row">
                                 <div className="col-12 col-sm-6">
                                     <ProjectCard text="Free Code Camp" images={imagesFcc} url="https://codepen.io/JJFarina">
                                         <p style={{margin:'4px'}}>
@@ -90,6 +105,8 @@ export default function Projects() {
                                         </p>
                                     </ProjectCard>
                                 </div>
+                            </div>
+                            <div className="row">
                                 <div className="col-12 col-sm-6">
                                     <ProjectCard text="Academia Rosario Ballet" images={imagesArb} url="https://www.academiarosarioballet.com.ar">
                                         <p style={{margin:'4px'}}>
@@ -103,9 +120,6 @@ export default function Projects() {
                                         </p>
                                     </ProjectCard>
                                 </div>
-                            </div>
-                            <div className="row">
-                                <div className="col-12 col-sm-3"></div>
                                 <div className="col-12 col-sm-6">
                                     <ProjectCard text="Jamming" images={imagesJamming} url="https://gamejolt.com/games/jamming/46288">
                                         <p style={{margin:'4px'}}>
@@ -119,7 +133,6 @@ export default function Projects() {
                                         </p>
                                     </ProjectCard>
                                 </div>
-                                <div className="col-12 col-sm-3"></div>
                             </div>
                         </div>
                     </FadeIn>
